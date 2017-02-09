@@ -24,7 +24,11 @@
             <children>
                 <TextField fx:id="channelId" text="N/A" editable="false" styleClass="noteditable, text-strong"
                            focusTraversable="false" onContextMenuRequested="#openChannelContext" onMouseClicked="#closeChannelContext"
-                           GridPane.columnSpan="4"/>
+                           GridPane.columnSpan="4">
+                    <tooltip>
+                        <Tooltip text="Unique identifier of the channel."/>
+                    </tooltip>
+                </TextField>
                 <Button fx:id="close" mnemonicParsing="false" styleClass="close-channel" text="Close"
                         GridPane.columnIndex="4" GridPane.halignment="RIGHT"/>
 
@@ -32,25 +36,66 @@
                              progress="0.0" snapToPixel="false" focusTraversable="false"
                              GridPane.columnSpan="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1"/>
 
-                <Label styleClass="text-muted" text="Node id" GridPane.rowIndex="2"/>
+                <Label styleClass="text-muted" text="Node id" GridPane.rowIndex="2">
+                    <tooltip>
+                        <Tooltip text="Public key of the node this channel is connected to."/>
+                    </tooltip>
+                </Label>
                 <TextField fx:id="nodeId" text="N/A" focusTraversable="false" editable="false" styleClass="noteditable"
-                           GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2"/>
+                           GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
+                    <tooltip>
+                        <Tooltip text="Public key of the node this channel is connected to."/>
+                    </tooltip>
+                </TextField>
 
-                <Label styleClass="text-muted" text="Your balance (milliBTC)" GridPane.rowIndex="3"/>
+                <Label styleClass="text-muted" text="Your balance (milliBTC)" GridPane.rowIndex="3">
+                    <tooltip>
+                        <Tooltip text="Amount on your side of the channel."/>
+                    </tooltip>
+                </Label>
                 <TextField fx:id="amountUs" text="N/A" focusTraversable="false" editable="false" styleClass="noteditable"
-                           GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                           GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <tooltip>
+                        <Tooltip text="Amount on your side of the channel."/>
+                    </tooltip>
+                </TextField>
 
-                <Label styleClass="text-muted" text="Capacity (milliBTC)" GridPane.rowIndex="4"/>
+                <Label styleClass="text-muted" text="Capacity (milliBTC)" GridPane.rowIndex="4">
+                    <tooltip>
+                        <Tooltip text="Available capacity of this channel, in milli-bitcoins."/>
+                    </tooltip>
+                </Label>
                 <TextField fx:id="capacity" text="N/A" focusTraversable="false" editable="false" styleClass="noteditable"
-                           GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                           GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <tooltip>
+                        <Tooltip text="Available capacity of this channel, in milli-bitcoins."/>
+                    </tooltip>
+                </TextField>
 
-                <Label styleClass="text-muted" text="Funder" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+                <Label styleClass="text-muted" text="Funder" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <tooltip>
+                        <Tooltip text="True if your node is the funder of the channel."/>
+                    </tooltip>
+                </Label>
                 <TextField fx:id="funder" text="N/A" focusTraversable="false" editable="false" styleClass="noteditable"
-                           GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                           GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                    <tooltip>
+                        <Tooltip text="True if your node is the funder of the channel."/>
+                    </tooltip>
+                </TextField>
 
-                <Label styleClass="text-muted" text="State" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                <Label styleClass="text-muted" text="State" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <tooltip>
+                        <Tooltip text="Current state of the channel. The channel is operational when its state is NORMAL."/>
+                    </tooltip>
+                </Label>
                 <TextField fx:id="state" text="N/A" focusTraversable="false" editable="false" styleClass="noteditable"
-                           GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4"/>
+                           GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                    <tooltip>
+                        <Tooltip text="Current state of the channel. The channel is operational when its state is NORMAL."/>
+                    </tooltip>
+                </TextField>
 
 
             </children>
